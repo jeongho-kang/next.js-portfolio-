@@ -8,7 +8,7 @@ export default function ProjectItem({data}) {
     const descrip = data.properties.description.rich_text[0]?.plain_text
     const daystart = data.properties.day.date.start
     const dayend = data.properties.day.date.end
-    const Imgsrc = data.cover.external.url
+    const Imgsrc = data.cover.file?.url || data.cover.external.url
     const tags = data.properties.tag.multi_select
 
     return (
